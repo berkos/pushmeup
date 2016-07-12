@@ -2,7 +2,7 @@ module APNS
   class Notification
     attr_accessor :device_token, :alert, :badge, :sound, :other, :silent
     
-    def initialize(device_token, message, silent)
+    def initialize(device_token, message, silent = nil)
       self.device_token = device_token
       if message.is_a?(Hash)
         self.alert = message[:alert]
